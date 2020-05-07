@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { Route, Switch, Link } from 'react-router-dom';
 import HomePage from './page/homePage/homePage.Component';
+import ShopePage from './page/shop/shopePage.component';
 
 const Hats = (props) => {
 	console.log(props);
@@ -31,6 +32,7 @@ function App() {
 				<Route exact path="/" component={HomePage} />
 				<Route exact path="/hats" component={Hats} />
 				<Route path="/hats/:model" component={HatsDetail} />
+				<Route path="/shop" component={ShopePage} />
 			</Switch>
 		</div>
 	);

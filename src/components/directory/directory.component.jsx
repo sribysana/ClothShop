@@ -46,6 +46,19 @@ class Directory extends React.Component {
 		return (
 			<div className="directory-menu">
 				{this.state.section.map(({ id, ...menuItemProps }) => <MenuItem key={id} {...menuItemProps} />)}
+				{/*<div className={`menu-item`}>
+					<iframe
+						id="question-iframe"
+						is="x-frame-bypass"
+						width="800"
+						height="800"
+						src="https://www.google.com"
+						className="form-control"
+						rameborder="0"
+						allowFullScreen
+						crossOrigin="anonymous"
+					/>
+				</div>*/}
 			</div>
 		);
 	}
