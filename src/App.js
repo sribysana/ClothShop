@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import { Route, Switch, Link } from 'react-router-dom';
+import { Route, Switch, Link, BrowserRouter } from 'react-router-dom';
 import HomePage from './page/homePage/homePage.Component';
 import ShopePage from './page/shop/shopePage.component';
 import Header from './components/header/header.component';
 import SignInSignUpPage from './page/signIn-signUp/signIn-signUp.component';
-import { auth } from './components/firebase/firebase.utils';
+import { auth, createUserProfileDocument } from './components/firebase/firebase.utils';
 
 const Hats = (props) => {
 	console.log(props);
@@ -37,11 +37,25 @@ class App extends React.Component {
 	}
 	unSubscribe = null;
 	componentDidMount() {
-		this.unSubscribe = auth.onAuthStateChanged((user) => {
+		this.unSubscribe = auth.onAuthStateChanged(async (userAuth) => {
+			if (userAuth) {
+				const userRef = await createUserProfileDocument(userAuth);
+
+				console.log('^^^^^^^^^');
+				userRef.onSnapshot((snapShot) => {
+					console.log('snapShot%%%%%%', snapShot);
+					this.setState({
+						currentUser: {
+							id: snapShot.id,
+							...snapShot.data()
+						}
+					});
+				});
+			}
 			this.setState({
-				currentUser: user
+				currentUser: userAuth
 			});
-			console.log('user>>>>', user);
+			console.log('user>>>>', userAuth);
 		});
 	}
 	componentWillUnmount() {

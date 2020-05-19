@@ -14,9 +14,33 @@ const config = {
 };
 
 firebase.initializeApp(config);
-
 export const auth = firebase.auth();
 export const store = firebase.firestore();
+const user = store.collection('users').doc('oDkrDROIFTqhx60Sd3Gz');
+// console.log('Fire Store User>>>> ', user);
+
+export const createUserProfileDocument = async (userAuth, additionalData) => {
+	if (!userAuth) return;
+	const userRef = store.doc(`users/${userAuth.uid}`);
+	const snapShot = await userRef.get();
+	console.log(snapShot);
+	if (!snapShot.exists) {
+		const { email, displayName, phoneNumber } = userAuth;
+		const createdAt = new Date();
+		try {
+			await userRef.set({
+				displayName,
+				email,
+				phoneNumber,
+				createdAt,
+				...additionalData
+			});
+		} catch (err) {
+			console.log('error creating the user', err.messaage);
+		}
+	}
+	return userRef;
+};
 // new firebase.auth.GoogleAuthProvider();
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' });

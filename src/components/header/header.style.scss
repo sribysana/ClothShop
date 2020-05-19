@@ -17,5 +17,12 @@
 			padding: 10px 15px;
 			cursor: pointer;
 		}
+		&.userInfo {
+			display: flex;
+			flex-direction: column;
+			.displayName {
+				font-size: .7em;
+			}
+		}
 	}
 }
