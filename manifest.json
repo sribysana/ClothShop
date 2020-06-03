@@ -1,0 +1,25 @@
+{
+	"short_name": "PWA Shopping Cart Sample",
+	"name": "Progressive web apps Shopping Cart Sample ",
+	"icons": [
+		{
+			"src": "logo192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "pwa.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "logo512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"start_url": "index.html",
+	"display": "standalone",
+	"theme_color": "#222222",
+	"background_color": "#4cc1fc"
+}

@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ClothShop/static/css/main.186dcff6.chunk.css",
+    "main.js": "/ClothShop/static/js/main.2926c634.chunk.js",
+    "main.js.map": "/ClothShop/static/js/main.2926c634.chunk.js.map",
+    "runtime-main.js": "/ClothShop/static/js/runtime-main.6526864a.js",
+    "runtime-main.js.map": "/ClothShop/static/js/runtime-main.6526864a.js.map",
+    "static/js/2.9122c6ee.chunk.js": "/ClothShop/static/js/2.9122c6ee.chunk.js",
+    "static/js/2.9122c6ee.chunk.js.map": "/ClothShop/static/js/2.9122c6ee.chunk.js.map",
+    "index.html": "/ClothShop/index.html",
+    "precache-manifest.14c4d59c194d5c60605429df994dad6e.js": "/ClothShop/precache-manifest.14c4d59c194d5c60605429df994dad6e.js",
+    "service-worker.js": "/ClothShop/service-worker.js",
+    "static/css/main.186dcff6.chunk.css.map": "/ClothShop/static/css/main.186dcff6.chunk.css.map",
+    "static/js/2.9122c6ee.chunk.js.LICENSE.txt": "/ClothShop/static/js/2.9122c6ee.chunk.js.LICENSE.txt",
+    "static/media/crown.f3042a49.svg": "/ClothShop/static/media/crown.f3042a49.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6526864a.js",
+    "static/js/2.9122c6ee.chunk.js",
+    "static/css/main.186dcff6.chunk.css",
+    "static/js/main.2926c634.chunk.js"
+  ]
+}
